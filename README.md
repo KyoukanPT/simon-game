@@ -6,7 +6,8 @@
 <br>
 - Press any keyboard button to start. If you try to click with the mouse it will fail.
 - The goal is to follow color patterns
-- The game will add one color at each level. Repeat all the previous colors, until the current level you're in, by pressing the same color buttons, in order.
+- The game will add one color at each level. 
+- Repeat all the previous colors, until the current level you're in, by pressing the same color buttons, in order.
 - After failing a sequence, press any keyboard button to restart.
 
 <strong><em>Ps: Play this game on Desktop/Laptop only.</em></strong>
