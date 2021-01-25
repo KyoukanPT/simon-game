@@ -9,6 +9,6 @@
 - The game will add one color at each level. Repeat all the previous colors, until the current level you're in, by pressing the same color buttons, in order.
 - After failing a sequence, press any keyboard button to restart.
 
-Ps: <strong><em>Play this game on Desktop/Laptop only</em></strong>
+<strong><em>Ps: Play this game on Desktop/Laptop only</em></strong>
 
 Live page --> https://kyoukanpt.github.io/simon-game/
