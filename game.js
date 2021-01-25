@@ -7,7 +7,7 @@ var started = false;
 var wrongSound = "wrong";
 
 
-$(document).keypress(function () {
+$("#level-title").click(function () {
     if (!started) {
         nextSequence();
         $("#level-title").text("Level " + level);
@@ -36,7 +36,9 @@ function nextSequence() {
     var randomColor = gameColors[randomNumber];
     gamePattern.push(randomColor);
 
-    $("#" + randomColor).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+    setTimeout(function() {
+        $("#" + randomColor).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+    }, 100)
 
     playSound(randomColor);
 
@@ -53,7 +55,7 @@ function buttonAnimation(currentButton) {
     $("#" + currentButton).addClass("pressed");
     setTimeout(function () {
         $("#" + currentButton).removeClass("pressed");
-    }, 100)
+    }, 150)
 }
 
 
@@ -69,7 +71,7 @@ function checkSequences(currentLevel) {
             $("body").removeClass("game-over");
         }, 1000)
         playSound(wrongSound);
-        $("#level-title").html("Game Over.<br>Press Any Key to Restart.")
+        $("#level-title").html("Game Over.<br>Click HERE to Restart.")
         startOver();
     }
 }
