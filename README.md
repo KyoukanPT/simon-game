@@ -1,6 +1,6 @@
 <h2> Simon Game </h2>
 
-<p>This a very simple simon game that I created in my spare time to test my HTML, CSS, JavaScript and JQuery skills.</p>
+<p>This a very simple Simon game that I created in my spare time to test my HTML, CSS, JavaScript and JQuery skills.</p>
 
 <strong>The rules of the game are :</strong>
 <br>
