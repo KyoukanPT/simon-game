@@ -27,8 +27,8 @@ $(".btn").click(function () {
 
 
 function nextSequence() {
-    level++;
     userClickPattern = [];
+    level++;
 
     $("#level-title").text("Level " + level);
 
@@ -36,12 +36,23 @@ function nextSequence() {
     var randomColor = gameColors[randomNumber];
     gamePattern.push(randomColor);
 
-    setTimeout(function() {
-        $("#" + randomColor).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
-    }, 100)
+    playPattern();
 
-    playSound(randomColor);
+}
 
+
+function playPattern() {
+    var i = 0;
+
+    const intervalId = setInterval(function () {
+        $("#" + gamePattern[i]).fadeOut(100).fadeIn(100);
+        playSound(gamePattern[i]);
+
+        i += 1;
+        if (i === gamePattern.length) {
+            clearInterval(intervalId);
+        }
+    }, 1000);
 }
 
 
@@ -62,7 +73,9 @@ function buttonAnimation(currentButton) {
 function checkSequences(currentLevel) {
     if (gamePattern[currentLevel] === userClickPattern[currentLevel]) {
         if (gamePattern.length === userClickPattern.length) {
-            nextSequence();
+            setTimeout(function () {
+                nextSequence();
+            }, 1000)
         }
     }
     else {
